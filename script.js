@@ -74,3 +74,12 @@ var btnSecond = document.getElementsByClassName("btn-secondary");
 btnSecond[0].addEventListener("click", function btnSecondClick() {
     document.getElementsByClassName("row")[1].prepend(document.getElementsByClassName("col-md-4")[5]);
 });
+
+
+//Fonctionalité 8
+var btnPrim = document.getElementsByClassName("btn-primary")[0];
+btnPrim.removeAttribute("href");
+
+btnPrim.addEventListener("click", function btnPrimClick() {
+    document.getElementsByClassName("row")[1].append(document.getElementsByClassName("col-md-4")[0]);
+});
