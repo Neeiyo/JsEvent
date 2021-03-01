@@ -45,14 +45,32 @@ var body = document.getElementsByClassName("col-sm-8");
 
 navbar[0].addEventListener("dblclick", function menuToggle() {
     document.styleSheets[0].disabled = true | false;
-    isDisable = true;
 });
 
 body[0].addEventListener("dblclick", function menuToggle() {
-    window.location.reload()
-    isDisable = false;
+    window.location.reload();
 });
 
 
 
 //Fonctionalité 6
+var btnView = document.getElementsByClassName("btn-success");
+
+for (let l = 0; l < btnView.length; l++) {
+    btnView[l].addEventListener("mouseover", function MouseBtnView() {
+
+        if (document.getElementsByClassName("card-text")[l].classList.toggle("collapse") === false) {
+            document.getElementsByClassName("card-img-top")[l].style.width = "100%";
+
+        } else {
+            document.getElementsByClassName("card-img-top")[l].style.width = "20%";
+        }
+    });
+}
+
+//Fonctionalité 7
+var btnSecond = document.getElementsByClassName("btn-secondary");
+
+btnSecond[0].addEventListener("click", function btnSecondClick() {
+    document.getElementsByClassName("row")[1].prepend(document.getElementsByClassName("col-md-4")[5]);
+});
